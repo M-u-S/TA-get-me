@@ -2,7 +2,7 @@
 
 Get web API data into Splunk
 
-This Splunk app is a pure fun app and was used in my Darksky Photographie Splunk app at .conf 2017 talk:
+This Splunk Add-On is pure fun and was used in my Darksky Photographie talk at .conf 2017:
 
 **Take a talk into the art of dark sky photography with a splunk ninja**
 
@@ -10,7 +10,7 @@ This Splunk app is a pure fun app and was used in my Darksky Photographie Splunk
 
 **Install:**
 
-Install as usual in the Splunk web or copy into $SPLUNK_HOME/etc/apps (don't use it on a prod system!)
+Install as usual in the Splunk web or copy into $SPLUNK_HOME/etc/apps (Pease don't use it on a prod system!)
 
 **Configure:**
 
