@@ -42,6 +42,10 @@ SCHEME = """<scheme>
                 <title>API token:</title>
                 <description>Provide your API token to access the data</description>
             </arg>
+            <arg name="debug">
+                <title>Debug:</title>
+                <description>Enable or disable debugging</description>
+            </arg>
         </args>
     </endpoint>
 </scheme>
