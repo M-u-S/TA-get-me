@@ -1,7 +1,7 @@
 """ dummy place holder modular input to enable Splunk Web config """
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Aug 25, 2017 7:48:46 PM$'
-__version__ = '1.0'
+__version__ = '1.2.0'
 
 import sys
 import splunk.Intersplunk
