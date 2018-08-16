@@ -1,7 +1,7 @@
 """ dummy place holder modular input to enable Splunk Web config """
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Aug 25, 2017 7:48:46 PM$'
-__version__ = '1.0'
+__version__ = '1.2.0'
 
 import sys
 import splunk.Intersplunk
@@ -41,6 +41,10 @@ SCHEME = """<scheme>
             <arg name="token">
                 <title>API token:</title>
                 <description>Provide your API token to access the data</description>
+            </arg>
+            <arg name="debug">
+                <title>Debug:</title>
+                <description>Enable or disable debugging</description>
             </arg>
         </args>
     </endpoint>

@@ -2,7 +2,7 @@
 
 Get web API data into Splunk
 
-This Splunk app is a pure fun app and was used in my Darksky Photographie Splunk app at .conf 2017 talk:
+This Splunk Add-On is pure fun and was used in my Darksky Photographie talk at .conf 2017:
 
 **Take a talk into the art of dark sky photography with a splunk ninja**
 
@@ -10,7 +10,7 @@ This Splunk app is a pure fun app and was used in my Darksky Photographie Splunk
 
 **Install:**
 
-Install as usual in the Splunk web or copy into $SPLUNK_HOME/etc/apps (don't use it on a prod system!)
+Install as usual in the Splunk web or copy into $SPLUNK_HOME/etc/apps (Pease don't use it on a prod system!)
 
 **Configure:**
 
@@ -20,7 +20,7 @@ Copy 'default/inputs.conf' to 'local/'
 
 **Weather API** - get your API key from http://api.openweathermap.org and use the Splunk web to configure the input.
 
-**Google directions** - get your API key from https://developers.google.com/maps/documentation/directions/get-api-key and use the Splunk web to configure the input.
+**MapBox directions** - get your API key from https://www.mapbox.com and use the Splunk web to configure the input.
 
 **Usage:**
 
@@ -41,3 +41,7 @@ and change the debug option in the `debug setting` stanza from `no` to `yes`.
 This is an open source project, no support provided, but you can ask questions
 on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-get-me
+
+**Version**
+
+17. August 2018 : 1.2.0 / Replaced Googel map API with MapBox API
