@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Aug 25, 2017 7:48:46 PM$'
-__version__ = '1.2.0'
+__version__ = '1.2.1'
 
 import sys
 import os
