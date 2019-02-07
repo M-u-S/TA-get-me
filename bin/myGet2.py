@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Aug 25, 2017 7:48:46 PM$'
-__version__ = '1.2.1'
+__version__ = '1.2.2'
 
 import sys
 import os
@@ -301,9 +301,11 @@ try:  # lets do it
             splunk.Intersplunk.outputResults(responses)
 
     # getting directions
-    if 'direction' in section_name:
-        con_str = '%sjson?origin=%s,%s&destination=%s,%s&units=metric&key=%s' % (
-            server, lat, lon, dest_lat, dest_lon, token)
+    if 'directions' in section_name:
+        #con_str = '%sjson?origin=%s,%s&destination=%s,%s&units=metric&key=%s' % (
+        #    server, lat, lon, dest_lat, dest_lon, token)
+        con_str = '%s/%s,%s;%s,%s.json?access_token=%s&geometries=geojson' % (
+            server, lon, lat, dest_lon, dest_lat, token)
         logger.info('using con_str %s ...' % con_str)
         url = urllib2.urlopen('%s' % con_str)
         r_parsed = json.loads(url.read())
@@ -311,24 +313,27 @@ try:  # lets do it
         logger.info('parsed result %s ...' % result)
         responses = []  # setup empty list
         step_num = 0
-        for route in result:
-            for leg in route['legs']:
-                for step in leg['steps']:
-                    response = {}  # setup empty dict
-                    response['step_num'] = step_num  # fill in key value pairs
-                    # fill in key value pairs
-                    response['start.lat'] = step['start_location']['lat']
-                    # fill in key value pairs
-                    response['start.lon'] = step['start_location']['lng']
-                    # fill in key value pairs
-                    response['stop.lat'] = step['end_location']['lat']
-                    # fill in key value pairs
-                    response['stop.lon'] = step['end_location']['lng']
-                    od = collections.OrderedDict(
-                        sorted(response.items()))  # sort the dict
-                    # append the ordered results to the list
-                    responses.append(od)
-                    step_num += 1
+        for routes in result:
+            logger.info('parsed routes %s ...' % routes)
+            for key, value in routes.iteritems():
+                if 'geometry' in key:
+                    logger.info('parsed key %s, value %s ...' % (key, value))
+                    coors = value['coordinates']
+                    logger.info('parsed coors %s ...' % coors)
+                    for steps in coors:
+                        logger.info('parsed steps %s ...' % steps)
+                        response = {}  # setup empty dict
+                        response['step_num'] = step_num
+                        # fill in key value pairs
+                        response['start.lat'] = steps[1]
+                        # fill in key value pairs
+                        response['start.lon'] = steps[0]
+                        od = collections.OrderedDict(
+                             sorted(response.items()))  # sort the dict
+                        # append the ordered results to the list
+                        responses.append(od)
+                        step_num += 1
+                    logger.info('parsed response %s ...' % response)
         # print the result into Splunk UI
         splunk.Intersplunk.outputResults(responses)
 
