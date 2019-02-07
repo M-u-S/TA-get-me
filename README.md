@@ -46,3 +46,4 @@ Github repository: https://github.com/M-u-S/TA-get-me
 
 `17. August 2018 : 1.2.0 / Replaced Google map API with MapBox API`
 `18. August 2018 : 1.2.1 / Fixed typos`
+`07. February 2019 : 1.2.2 / Fixed Mapbox API call`
