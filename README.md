@@ -42,8 +42,13 @@ This is an open source project, no support provided, but you can ask questions
 on answers.splunk.com and I will most likely answer it.
 Github repository: https://github.com/M-u-S/TA-get-me
 
+I validate all my apps with appinspect and the log can be found in the README
+folder of each app.
+
 **Version**
 
 `17. August 2018 : 1.2.0 / Replaced Google map API with MapBox API`
 `18. August 2018 : 1.2.1 / Fixed typos`
 `07. February 2019 : 1.2.2 / Fixed Mapbox API call`
+`14. February 2019 : 1.2.3 / No changes, uploaded for appInspect`
+`17. February 2019 : 1.2.4 / No changes, uploaded for appInspect`
