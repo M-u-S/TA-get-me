@@ -1,7 +1,7 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/env python2.7
 __author__ = 'Michael Uschmann / MuS'
 __date__ = 'Copyright $Aug 25, 2017 7:48:46 PM$'
-__version__ = '1.2.2'
+__version__ = '1.2.4'
 
 import sys
 import os
