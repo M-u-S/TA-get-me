@@ -45,6 +45,9 @@ Github repository: https://github.com/M-u-S/TA-get-me
 I validate all my apps with appinspect and the log can be found in the README
 folder of each app.
 
+Running Splunk on Windows? Good Luck, not my problem.
+
+
 **Version**
 
 `17. August 2018 : 1.2.0 / Replaced Google map API with MapBox API`
